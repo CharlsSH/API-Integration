@@ -1,0 +1,47 @@
+body {
+	border-top: 5px solid #215a8f;
+}
+
+header {
+	padding: 1.5em 0;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+    width: 275px;
+}
+
+header h1 {
+	color: #215a8f;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+footer {
+	border-top: 1px solid #ccc;
+	color: #999;
+	font-style: italic;
+	margin-top: 1.5em;
+	padding: 1em 0;
+	text-align: right;
+}
+
+dd {
+	margin-bottom: 1em;
+}
+
+h2 {
+	color: #444;
+	border-bottom: 1px solid #ccc;
+	font-size: 1.75em;
+	font-weight: normal;
+	margin-bottom: 1em;
+	padding-bottom: 0.25em;
+}
+
+h3 {
+    color: #444;
+    font-size: 1.5em;
+    font-weight: normal;
+}
