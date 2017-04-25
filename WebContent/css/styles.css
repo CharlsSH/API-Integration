@@ -1,6 +1,33 @@
+/* COLORS */
 body {
-	border-top: 5px solid #215a8f;
+	border-top: 5px solid #ab0c0c;
 }
+
+header h1 {
+    color: #ab0c0c;
+}
+
+a,
+a:hover {
+	color: #ab0c0c;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+	background: #ab0c0c;
+	border-color: #ab0c0c;
+}
+
+.panel-primary>.panel-heading {
+	background: #ab0c0c;
+}
+
+.panel-primary {
+	border-color: #ab0c0c;
+}
+/* /COLORS */
 
 header {
 	padding: 1.5em 0;
@@ -13,8 +40,7 @@ header img {
 }
 
 header h1 {
-	color: #215a8f;
-	font-size: 1.2em;
+	font-size: 2em;
 	text-align: center;
 }
 
