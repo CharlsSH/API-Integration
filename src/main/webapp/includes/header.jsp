@@ -59,8 +59,8 @@
  String connectionURL = "https://testservices.viafirma.com/inbox/app/default/serviceWS";
  String returnURL = baseURL +"examples/sign-request.jsp";
  String notificationURL = baseURL +"notification";
- String system = "ruben";
- String key = "C0G6RE1PZMTV8BSQ9XWQJXRYLK6YU8SLKQBAD5UP";
+ String system = "viafirmainboxsample";
+ String key = "HKMOCNCSTE0Q2NHBFYSVT4PEAIGIQTOGTCW9WUHP";
  
  String serverVersion = "2.5.X";
  String action = (String) request.getParameter("action");

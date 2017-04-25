@@ -29,7 +29,7 @@
                     <label for="userId" class="col-sm-2 control-label">User</label>
                     <div class="col-sm-10">
                         <select id="userId" name="userId" class="form-control">
-                            <option value="28811190x">28811190x</option>
+                            <option value="99331100">99331100</option>
                         </select>
                     </div>
                 </div>
@@ -38,7 +38,8 @@
                     <label for="workflowId" class="col-sm-2 control-label">Workflow</label>
                     <div class="col-sm-10">
                         <select id="workflowId" name="workflowId" class="form-control">
-                            <option value="27XYSFGZFD">27XYSFGZFD</option>
+                            <option value="MF0GXK40PC">workflow_sample_21</option>
+                            <option value="VZCETI58NU">workflow_sample_22</option>
                         </select>
                     </div>
                 </div>
