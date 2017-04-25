@@ -1,7 +1,7 @@
 <%@include file="includes/header.jsp" %>
 
         <section>
-            <h2>Available Actions</h2>
+            <h2>API Methods</h2>
             
             <%
 

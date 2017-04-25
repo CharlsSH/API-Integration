@@ -1,11 +1,9 @@
 <%@include file="../includes/header.jsp" %>
 
 <section>
-    <h2>Sign request</h2>
+    <h2>Signature request</h2>
     
     <%@include file="../includes/integration-info.jsp" %>
-
-    <p>Comunicación para preparar una petición con un solo firmante; el usuario firmante es redirigido desde la aplicación origen a Viafirma Inbox, allí firma la petición recién creada, y es redirigido de vuelta a la aplicación origen.</p>
     
     <hr />
     
@@ -23,12 +21,12 @@
 
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Data to be sent</h3>
+            <h3 class="panel-title">Request data</h3>
         </div>
         <div class="panel-body">
             <form  class="form-horizontal" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="userID" class="col-sm-2 control-label">User ID</label>
+                    <label for="userID" class="col-sm-2 control-label">User</label>
                     <div class="col-sm-10">
                         <select id="userId" name="userId" class="form-control">
                             <option value="28811190x">28811190x</option>

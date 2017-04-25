@@ -1,11 +1,9 @@
 <%@include file="../includes/header.jsp" %>
 
 <section>
-    <h2>Prepare Workflow Compose Request</h2>
+    <h2>Signature request (with workflow)</h2>
     
     <%@include file="../includes/integration-info.jsp" %>
-
-    <p>Esta opción es similar a la anterior, pero permite además especificar un flujo global existente a priori en la instancia de Viafirma Inbox.</p>
     
     <hr />
     
@@ -23,12 +21,12 @@
 
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Data to be sent</h3>
+            <h3 class="panel-title">Request data</h3>
         </div>
         <div class="panel-body">
             <form  class="form-horizontal" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="userId" class="col-sm-2 control-label">User ID</label>
+                    <label for="userId" class="col-sm-2 control-label">User</label>
                     <div class="col-sm-10">
                         <select id="userId" name="userId" class="form-control">
                             <option value="28811190x">28811190x</option>
@@ -37,7 +35,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="workflowId" class="col-sm-2 control-label">Workflow ID</label>
+                    <label for="workflowId" class="col-sm-2 control-label">Workflow</label>
                     <div class="col-sm-10">
                         <select id="workflowId" name="workflowId" class="form-control">
                             <option value="27XYSFGZFD">27XYSFGZFD</option>
