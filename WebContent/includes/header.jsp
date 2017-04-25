@@ -59,7 +59,7 @@
  String system = "ruben";
  String key = "C0G6RE1PZMTV8BSQ9XWQJXRYLK6YU8SLKQBAD5UP";
  
- String serverVersion = "1.5.X";
+ String serverVersion = "2.5.X";
  String action = (String) request.getParameter("action");
  String res = (String) request.getParameter("res");
  String message = (String) request.getParameter("message");
