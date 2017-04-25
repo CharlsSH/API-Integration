@@ -54,8 +54,8 @@
 <%@page import="com.viafirma.tray.ws.dto.RequestMetadataDTO"%>
 <%
  String connectionURL = "https://testservices.viafirma.com/inbox/app/default/serviceWS";
- String returnURL = "http://localhost:8080/viafirmaInboxWebservicesExamples/examples/sign-request.jsp";
- String notificationURL = "http://localhost:8080/viafirmaInboxWebservicesExamples/notification";
+ String returnURL = "http://localhost:8080/viafirma-inbox-sample/examples/sign-request.jsp";
+ String notificationURL = "http://localhost:8080/viafirma-inbox-sample/notification";
  String system = "ruben";
  String key = "C0G6RE1PZMTV8BSQ9XWQJXRYLK6YU8SLKQBAD5UP";
  

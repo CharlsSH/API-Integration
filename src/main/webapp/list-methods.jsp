@@ -79,111 +79,6 @@
                 </div>
             </div>
             
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Utility -->
-                    <div class="panel panel-primary">
-                      <div class="panel-heading">
-                        <h3 class="panel-title">Utility</h3>
-                      </div>
-                      <div class="panel-body">
-                        <dl>
-                            <dt><a href="?action=ping">Ping</a></dt>
-                            <dd>Este enlace utiliza el método 'ping' del API; simplemente chequea que la comunicación con el servidor de Viafirma Inbox es correcta, y el user/pass enviado en las cabeceras HTTP autentica correctamente en el servidor.</dd>
-                            
-                            <dt><a href="?action=jobs">Get Jobs</a></dt>
-                            <dd>Recupera los cargos de la instancia de Viafirma Inbox, devolviendo su identificador único y su nombre literal</dd>
-                            
-                            <dt><a href="?action=groups">Get Groups</a></dt>
-                            <dd>Recupera los grupos de la instancia de Viafirma Inbox, devolviendo su identificador único y su nombre literal</dd>
-                
-                            <dt><a href="?action=workflows">Get Workflows</a></dt>
-                            <dd>Recupera los flujos de trabajo públicos de la instancia de Viafirma Inbox, devolviendo su identificador único y su nombre literal.</dd>
-                
-                            <dt><a href="?action=rejecttypes">Get Reject Types</a></dt>
-                            <dd>Recupera los motivos de rechazo normalizados de la instancia de Viafirma Inbox.</dd>
-                            
-                            <dt><a href="?action=metadata">Get Metadata Keys</a></dt>
-                            <dd>Recupera los metadatos globales de la instancia de Viafirma Inbox, devolviendo su nombre y su valor por defecto, si existe.</dd>
-                
-                            <dt><a href="?action=status">Get Status</a></dt>
-                            <dd>Recupera la lista de posibles estados de una petición. Viafirma Inbox devuelve uno de estos valores a la dirección de notificación en un parámetro HTTP llamado 'action'.</dd>
-                            
-                            <dt><a href="?action=actiontypes">Get Action Types</a></dt>
-                            <dd>Recupera la lista de posibles acciones a realizar en una petición para un usuario (FIRMA, VISTOBUENO); debe pasarse uno de estos valores para un par petición de firma / usuario (un usuario sólo puede firmar o hacer visto bueno, además de rechazar la petición).</dd>
-                        
-                            <dt><a href="?action=accesstypes">Get Access Types</a></dt>
-                            <dd>Recupera la lista de posibles tipos de acceso a la verificación para una petición; uno de estos valores debe pasarse como atributo de una petición al crearla vía API.</dd>
-                        </dl>
-                      </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <!-- Work with the system -->
-                    <div class="panel panel-primary">
-                      <div class="panel-heading">
-                        <h3 class="panel-title">Work with the system</h3>
-                      </div>
-                      <div class="panel-body">
-                        <dl>
-                            <dt><a href="?action=requestoperations">Test Request Operations</a></dt>
-                            <dd>
-                                <p>Método general de prueba para la gestión de peticiones en remoto vía API. Utiliza varios métodos:</p>
-                                <ol>
-                                    <li><code>sendRequest</code>, para crear la petición (data generales, ficheros, destinatarios, metadatos, etc.)</li>
-                                    <li><code>addComment</code>, para añadir un comentario a la petición.</li>
-                                    <li><code>getRequestInfo</code>, para recuperar información de la petición.</li>
-                                    <li><code>getRequestComments</code>, para recuperar los comentarios de la petición.</li>
-                                    <li><code>getRequestDocuments</code>, para recuperar los documentos firmables de la petición.</li>
-                                    <li><code>getRequestAnnexes</code>, para recuperar los documentos anexos a la petición.</li>
-                                    <li><code>getRequestMetadata</code>, para recuperar los metadatos (clave/valor) de la petición.</li>
-                                </ol>
-                            </dd>
-                               
-                            <dt><a href="?action=signeddocument">Get Signed Document</a></dt>
-                            <dd>Recupera el pdf firmado de una petición.</dd>
-                            
-                            <dt><a href="?action=signatureticket">Get Signature Ticket</a></dt>
-                            <dd>Recupera el informe de firmas de una petición.</dd>
-                            
-                            <dt><a href="?action=preparecompose">Prepare Compose Request</a></dt>
-                            <dd>Esta opción realiza una comunicación con Viafirma Inbox para preparar la pantalla de creación de una petición, enviando el documento en dicha comunicación. El usuario es redirigido a Viafirma Inbox, y al enviar la petición, retorna a la aplicación origen.</dd>
-                                    
-                            <dt><a href="?action=prepareworkflowcompose">Prepare Workflow Compose Request (Ej. '<%=testPublicWorkflowID%>') </a></dt>
-                            <dd>Esta opción es similar a la anterior, pero permite además especificar un flujo global existente a priori en la instancia de Viafirma Inbox.</dd>
-                            
-                            <dt><a href="?action=preparesign">Prepare Sign Request</a></dt>
-                            <dd>Esta opción va un paso más allá que las anteriores; se trata de una comunicación para preparar una petición con un solo firmante; el usuario firmante es redirigido desde la aplicación origen a Viafirma Inbox, allí firma la petición recién creada, y es redirigido de vuelta a la aplicación origen.</dd>
-                            
-                            <dt><a href="?action=evaluateGlobalWorkflow">Evaluate Global Workflow and Send Request with the obtained String Workflow Representation</a></dt>
-                            <dd>Dado el ID de un workflow, recupera una representación String del mismo, que puede ser utilizado como parámetro para un sendRequestWithStrWorkflow</dd>
-                        </dl>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Users -->
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Users</h3>
-              </div>
-              <div class="panel-body">
-                <dl>
-                    <dt><a href="?action=users">Get all users</a></dt>
-                    <dd>Recupera los usuarios de la instancia de Viafirma Inbox.</dd>
-                    
-                    <dt><a href="?action=userbynif">Get user by NIF (ex. <%=testUserId%>)</a></dt>
-                    <dd>Busca un usuario por un identificador (NIF).</dd>
-                    
-                    <dt><a href="?action=searchusers">Search Users (ex. Admin)</a></dt>
-                    <dd>Busca un usuario por un literal (que puede coincidir con el NIF, nombre, apellido 1, apellido 2...).</dd>
-                </dl>
-              </div>
-            </div>
-
-
             <%
                 if (action != null && !action.equals("")) {
                     out.println("<hr />");
@@ -650,6 +545,110 @@
                     }
                 }
             %>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Utility -->
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Utility</h3>
+                      </div>
+                      <div class="panel-body">
+                        <dl>
+                            <dt><a href="?action=ping">Ping</a></dt>
+                            <dd>Este enlace utiliza el método 'ping' del API; simplemente chequea que la comunicación con el servidor de Viafirma Inbox es correcta, y el user/pass enviado en las cabeceras HTTP autentica correctamente en el servidor.</dd>
+                            
+                            <dt><a href="?action=jobs">Get Jobs</a></dt>
+                            <dd>Recupera los cargos de la instancia de Viafirma Inbox, devolviendo su identificador único y su nombre literal</dd>
+                            
+                            <dt><a href="?action=groups">Get Groups</a></dt>
+                            <dd>Recupera los grupos de la instancia de Viafirma Inbox, devolviendo su identificador único y su nombre literal</dd>
+                
+                            <dt><a href="?action=workflows">Get Workflows</a></dt>
+                            <dd>Recupera los flujos de trabajo públicos de la instancia de Viafirma Inbox, devolviendo su identificador único y su nombre literal.</dd>
+                
+                            <dt><a href="?action=rejecttypes">Get Reject Types</a></dt>
+                            <dd>Recupera los motivos de rechazo normalizados de la instancia de Viafirma Inbox.</dd>
+                            
+                            <dt><a href="?action=metadata">Get Metadata Keys</a></dt>
+                            <dd>Recupera los metadatos globales de la instancia de Viafirma Inbox, devolviendo su nombre y su valor por defecto, si existe.</dd>
+                
+                            <dt><a href="?action=status">Get Status</a></dt>
+                            <dd>Recupera la lista de posibles estados de una petición. Viafirma Inbox devuelve uno de estos valores a la dirección de notificación en un parámetro HTTP llamado 'action'.</dd>
+                            
+                            <dt><a href="?action=actiontypes">Get Action Types</a></dt>
+                            <dd>Recupera la lista de posibles acciones a realizar en una petición para un usuario (FIRMA, VISTOBUENO); debe pasarse uno de estos valores para un par petición de firma / usuario (un usuario sólo puede firmar o hacer visto bueno, además de rechazar la petición).</dd>
+                        
+                            <dt><a href="?action=accesstypes">Get Access Types</a></dt>
+                            <dd>Recupera la lista de posibles tipos de acceso a la verificación para una petición; uno de estos valores debe pasarse como atributo de una petición al crearla vía API.</dd>
+                        </dl>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <!-- Work with the system -->
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Work with the system</h3>
+                      </div>
+                      <div class="panel-body">
+                        <dl>
+                            <dt><a href="?action=requestoperations">Test Request Operations</a></dt>
+                            <dd>
+                                <p>Método general de prueba para la gestión de peticiones en remoto vía API. Utiliza varios métodos:</p>
+                                <ol>
+                                    <li><code>sendRequest</code>, para crear la petición (data generales, ficheros, destinatarios, metadatos, etc.)</li>
+                                    <li><code>addComment</code>, para añadir un comentario a la petición.</li>
+                                    <li><code>getRequestInfo</code>, para recuperar información de la petición.</li>
+                                    <li><code>getRequestComments</code>, para recuperar los comentarios de la petición.</li>
+                                    <li><code>getRequestDocuments</code>, para recuperar los documentos firmables de la petición.</li>
+                                    <li><code>getRequestAnnexes</code>, para recuperar los documentos anexos a la petición.</li>
+                                    <li><code>getRequestMetadata</code>, para recuperar los metadatos (clave/valor) de la petición.</li>
+                                </ol>
+                            </dd>
+                               
+                            <dt><a href="?action=signeddocument">Get Signed Document</a></dt>
+                            <dd>Recupera el pdf firmado de una petición.</dd>
+                            
+                            <dt><a href="?action=signatureticket">Get Signature Ticket</a></dt>
+                            <dd>Recupera el informe de firmas de una petición.</dd>
+                            
+                            <dt><a href="?action=preparecompose">Prepare Compose Request</a></dt>
+                            <dd>Esta opción realiza una comunicación con Viafirma Inbox para preparar la pantalla de creación de una petición, enviando el documento en dicha comunicación. El usuario es redirigido a Viafirma Inbox, y al enviar la petición, retorna a la aplicación origen.</dd>
+                                    
+                            <dt><a href="?action=prepareworkflowcompose">Prepare Workflow Compose Request (Ej. '<%=testPublicWorkflowID%>') </a></dt>
+                            <dd>Esta opción es similar a la anterior, pero permite además especificar un flujo global existente a priori en la instancia de Viafirma Inbox.</dd>
+                            
+                            <dt><a href="?action=preparesign">Prepare Sign Request</a></dt>
+                            <dd>Esta opción va un paso más allá que las anteriores; se trata de una comunicación para preparar una petición con un solo firmante; el usuario firmante es redirigido desde la aplicación origen a Viafirma Inbox, allí firma la petición recién creada, y es redirigido de vuelta a la aplicación origen.</dd>
+                            
+                            <dt><a href="?action=evaluateGlobalWorkflow">Evaluate Global Workflow and Send Request with the obtained String Workflow Representation</a></dt>
+                            <dd>Dado el ID de un workflow, recupera una representación String del mismo, que puede ser utilizado como parámetro para un sendRequestWithStrWorkflow</dd>
+                        </dl>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Users -->
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Users</h3>
+              </div>
+              <div class="panel-body">
+                <dl>
+                    <dt><a href="?action=users">Get all users</a></dt>
+                    <dd>Recupera los usuarios de la instancia de Viafirma Inbox.</dd>
+                    
+                    <dt><a href="?action=userbynif">Get user by NIF (ex. <%=testUserId%>)</a></dt>
+                    <dd>Busca un usuario por un identificador (NIF).</dd>
+                    
+                    <dt><a href="?action=searchusers">Search Users (ex. Admin)</a></dt>
+                    <dd>Busca un usuario por un literal (que puede coincidir con el NIF, nombre, apellido 1, apellido 2...).</dd>
+                </dl>
+              </div>
+            </div>
 
             <a href="${pageContext.request.contextPath}/index.jsp">&larr; Back</a>
         </section>
