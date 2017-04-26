@@ -82,9 +82,7 @@
                 <div class="form-group">
                     <label for="userID" class="col-sm-2 control-label">User</label>
                     <div class="col-sm-10">
-                        <select id="userId" name="userId" class="form-control">
-                            <option value="99331100">99331100</option>
-                        </select>
+                        <input type="text" id="userId" name="userId" class="form-control" value="99331100" />
                     </div>
                 </div>
                 
