@@ -85,10 +85,6 @@
                 }
              }
              
-             System.out.println(fichero);
-             System.out.println(userId);
-             System.out.println(workflowId);
-             
              if (userId != null && fichero != null && workflowId != null) {
                  returnURL = returnURL + "?action=prepareworkflowcomposeresponse";
                  WorkflowRequestResponseDTO prepareComposeResponse = client.getService().prepareWorkflowRequest(userId, fichero.getName(), Files.readAllBytes(fichero.toPath()), workflowId, returnURL, notificationURL);

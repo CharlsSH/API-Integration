@@ -10,6 +10,9 @@
             <dt><a href="examples/send-request.jsp">Send signature request</a></dt>
             <dd>Choose a Viafirma Inbox user and a PDF file and send him a signature request</dd>
             
+            <dt><a href="examples/send-request-with-workflow.jsp">Send signature request (with workflow)</a></dt>
+            <dd>Choose a Viafirma Inbox workflow and a PDF file and send a signature request</dd>
+            
             <dt><a href="examples/sign-request.jsp">Signature</a></dt>
             <dd>Choose a Viafirma Inbox user and a PDF file and start a signature operation</dd>
             

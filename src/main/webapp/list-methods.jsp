@@ -8,8 +8,8 @@
     // An existing sample signed request ID
     String requestId = "E939-CMER-93FQ-8YG5";
 
-    String testUserId = "09431554J"; //An existing user ID
-    String testPublicWorkflowID = "BNDNZRTH9N"; //An existing GLOBAL (!) workflow public ID
+    String testUserId = "99331100"; //An existing user ID
+    String testPublicWorkflowID = "MF0GXK40PC"; //An existing GLOBAL (!) workflow public ID
 
     /*
     * ========================
