@@ -52,20 +52,15 @@
 <%@page import="com.viafirma.tray.ws.dto.SignRequestResponseDTO"%>
 <%@page import="com.viafirma.tray.ws.dto.RequestMetadataResponseDTO"%>
 <%@page import="com.viafirma.tray.ws.dto.RequestMetadataDTO"%>
+<%@include file="../config/config.jsp" %>
 <%
- String url = request.getRequestURL().toString();
- String baseURL = url.substring(0, url.length() - request.getRequestURI().length()) + request.getContextPath() + "/";
- 
- String connectionURL = "https://testservices.viafirma.com/inbox/app/default/serviceWS";
- String returnURL = baseURL +"examples/sign-request.jsp";
- String notificationURL = baseURL +"notification";
- String system = "viafirmainboxsample";
- String key = "HKMOCNCSTE0Q2NHBFYSVT4PEAIGIQTOGTCW9WUHP";
- 
- String serverVersion = "2.5.X";
- String action = (String) request.getParameter("action");
- String res = (String) request.getParameter("res");
- String message = (String) request.getParameter("message");
+    String url = request.getRequestURL().toString();
+    String baseURL = url.substring(0, url.length() - request.getRequestURI().length()) + request.getContextPath() + "/";
+    String returnURL = baseURL +"examples/sign-request.jsp";
+    String notificationURL = baseURL +"notification";
+    String action = (String) request.getParameter("action");
+    String res = (String) request.getParameter("res");
+    String message = (String) request.getParameter("message");
 %>
 <%!
  public void showErrorMessage(String msg, javax.servlet.jsp.JspWriter out) {

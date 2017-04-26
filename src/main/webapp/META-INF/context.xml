@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/viafirma-inbox-sample" reloadable="true">
+    
+    <Parameter name="system"
+        type="java.lang.String"
+        value="${system}" />
+        
+    <Parameter name="apikey"
+        type="java.lang.String"
+        value="${apikey}" />
+
+</Context>
