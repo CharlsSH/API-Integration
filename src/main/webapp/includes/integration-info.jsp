@@ -5,8 +5,6 @@
     <div class="panel-body">
         <ul>
             <li><strong>Viafirma Inbox URL</strong>: <%=connectionURL%></li>
-            <li><strong>System</strong>: <%=system%></li>
-            <li><strong>API Key</strong>: <%=key%></li>
         </ul>
     </div>
 </div>
